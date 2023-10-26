@@ -1,3 +1,36 @@
+* {
+  box-sizing: border-box;
+}
 body {
   font-family: verdana;
+}
+.three-column {
+  display: flex;
+}
+
+.cards {
+  flex: 4;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cards > section {
+  color: cornSilk;
+  margin: 1rem;
+  padding: 1rem;
+  border: solid 1px black;
+  background-color: dodgerBlue;
+  width: calc(100% / 3 - 2rem);
+  border-radius: 5px;
+}
+
+@media (max-width: 600px) {
+  .cards > section {
+    width: 100%;
+  }
+}
+
+.left,
+.right {
+  flex: 1;
 }
